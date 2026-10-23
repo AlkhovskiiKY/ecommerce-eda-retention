@@ -33,8 +33,8 @@ Python, DuckDB (для больших данных), pandas, matplotlib.
 - [x] Диапазон дат, уникальные пользователи
 - [x] Распределение event_type
 - [x] Session funnel
-- [ ] Retention D1/D7/D30 (в работе)
-- [ ] Когортная таблица
+- [х] Retention D1/D7/D30 (в работе)
+- [х] Когортная таблица
 - [ ] Визуализации (DAU, retention heatmap)
 - [ ] Выводы и рекомендации
 
