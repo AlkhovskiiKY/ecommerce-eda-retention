@@ -3,7 +3,7 @@
 ## Цель
 
 Исследовательский анализ поведения пользователей e-commerce
-за октябрь 2019 и расчёт метрик удержания (Retention D1/D7/D30, cohort triangle).
+за октябрь 2019 и расчёт метрик удержания.
 
 ## Данные
 
@@ -15,7 +15,7 @@
 
 ## Стек
 
-Python, DuckDB (для больших данных), pandas, matplotlib.
+Python, DuckDB, pandas, matplotlib, seaborn, NumPy.
 
 ## Первые результаты
 
@@ -25,18 +25,22 @@ Python, DuckDB (для больших данных), pandas, matplotlib.
 - Воронка по пользователям: 3.02М viewed → 337K carted → 196K purchased.
 - Конверсии по сессиям: View → Cart: 6.18%, Cart → Purchase: 50.7%.
 - Конверсии по пользователям: View → Cart: 11.14%, Cart → Purchase: 58.34%.
+- Замечен баг: нулевые ценники в количестве 68523 в заказах со статусом 'view', но далее мы имеем 150 нулевых заказов со статусом 'cart' и 0 со статусом 'purchase'.
 
 ## Прогресс
 
-- [x] Загрузка в DuckDB
-- [x] Первичный осмотр (shape, nulls, типы)
-- [x] Диапазон дат, уникальные пользователи
-- [x] Распределение event_type
 - [x] Session funnel
-- [х] Retention D1/D7/D30 (в работе)
-- [х] Когортная таблица
-- [ ] Визуализации (DAU, retention heatmap)
+- [x] User funnel + сравнение с session
+- [x] Retention D1/D7/D30 (strict / windowed)
+- [x] Когортная таблица (cohort triangle)
+- [x] Retention heatmap
+- [x] Retention curves по когортам
+- [x] Boxplot + median/IQR цены по неделям
+- [x] Проверка аномалий (price = 0, дубликаты)
+- [ ] DAU по дням
+- [ ] GMV и средний чек
 - [ ] Выводы и рекомендации
+- [ ] README: визуализация(дашборд и отдельно ключевые таблицы) + рекомендации
 
 ## Структура
 
